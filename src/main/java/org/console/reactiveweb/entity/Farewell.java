@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+// POJO that will serialize to JSON by the RESTful web service
+
 @Getter
 @Setter
 @AllArgsConstructor

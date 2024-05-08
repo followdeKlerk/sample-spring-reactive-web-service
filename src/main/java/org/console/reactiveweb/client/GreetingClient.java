@@ -16,7 +16,11 @@ public class GreetingClient {
   }
 
   public Mono<String> getMessage() {
-    return this.client.get().uri("/hello").accept(MediaType.APPLICATION_JSON).retrieve()
-        .bodyToMono(Greeting.class).map(Greeting::getMessage);
+
+    return this.client.get()
+            .uri("/hello")
+            .accept(MediaType.APPLICATION_JSON)
+            .retrieve()
+            .bodyToMono(Greeting.class).map(Greeting::getMessage);
   }
 }
